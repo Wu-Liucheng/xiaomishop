@@ -3,8 +3,84 @@
 <head>
     <meta charset="UTF-8">
     <title>小米商城</title>
+    <link rel="stylesheet" href="css/common.css" type="text/css">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <script type="text/javascript" src="js/methods.js"></script>
 </head>
-<body>
-
+<body onload="setLunbo()">
+<header>
+    <div class="content">
+        <div class="left-part">小米商城</div><div class="cut-off-left">&nbsp;&nbsp;|&nbsp;&nbsp;</div>
+        <div class="left-part">MIUI</div><div class="cut-off-left">&nbsp;&nbsp;|&nbsp;&nbsp;</div>
+        <div class="left-part">IoT</div><div class="cut-off-left">&nbsp;&nbsp;|&nbsp;&nbsp;</div>
+        <div class="left-part">云服务</div><div class="cut-off-left">&nbsp;&nbsp;|&nbsp;&nbsp;</div>
+        <div class="left-part">金融</div><div class="cut-off-left">&nbsp;&nbsp;|&nbsp;&nbsp;</div>
+        <div class="left-part">有品</div><div class="cut-off-left">&nbsp;&nbsp;|&nbsp;&nbsp;</div>
+        <div class="left-part">小爱开放平台</div><div class="cut-off-left">&nbsp;&nbsp;|&nbsp;&nbsp;</div>
+        <div class="left-part">企业团购</div><div class="cut-off-left">&nbsp;&nbsp;|&nbsp;&nbsp;</div>
+        <div class="left-part">资质证照</div><div class="cut-off-left">&nbsp;&nbsp;|&nbsp;&nbsp;</div>
+        <div class="left-part">协议规则</div><div class="cut-off-left">&nbsp;&nbsp;|&nbsp;&nbsp;</div>
+        <div class="left-part download-app">
+            <div class="two-dimension-code">
+                <div style="height: 1.5em"></div>
+                <img src="images/Snipaste_2019-12-12_16-10-54.png" alt="/"/>
+                <br/>
+                小米商城APP
+            </div>下载app
+        </div><div class="cut-off-left">&nbsp;&nbsp;|&nbsp;&nbsp;</div>
+        <div class="left-part">Select&nbsp; Location</div>
+        <div  class="right-part shop-cart-container" onmouseover="changeShopCartImg()"onmouseout="recoveryShopCartImg()">
+            <div class="shop-cart-info">购物车中还没有商品，赶紧选购吧！</div>
+            <img class="shop-cart" id="shop-cart" src="images/购物车.png">
+            &nbsp;&nbsp;购物车（0）
+        </div>
+        <div class="cut-off-right">&nbsp;&nbsp;|&nbsp;&nbsp;</div>
+        <div  class="right-part">消息通知</div><div class="cut-off-right">&nbsp;&nbsp;|&nbsp;&nbsp;</div>
+        <div  class="right-part">注册</div><div class="cut-off-right">&nbsp;&nbsp;|&nbsp;&nbsp;</div>
+        <div  class="right-part">登录</div>
+    </div>
+</header>
+<div id="site-header">
+    <div class="content">
+        <div class="logo">
+            <div class="logo-div">
+                <img src="images/logo1.png"><img src="images/logo2.png">
+            </div>
+        </div>
+        <div class="search-container">
+            <input class="search-input">
+            <div class="search-icon-container">
+                <img src="images/搜索.png" class="search-icon">
+            </div>
+            <div class="tags tag1">小米9&nbsp;Pro&nbsp;5G</div>
+            <div class="tags tag2">Redmi&nbsp;Note&nbsp;8</div>
+        </span>
+        </div>
+        <div class="link-container">
+            <a>小米手机</a>
+            <a>Redmi红米</a>
+            <a>电视</a>
+            <a>笔记本</a>
+            <a>家电</a>
+            <a>路由器</a>
+            <a>智能硬件</a>
+            <a>服务</a>
+            <a>社区</a>
+        </div>
+    </div>
+</div>
+<div class="content clear-fix" style="height: 26.25em">
+    <img class="lun-bo" id="lun-bo" src="images/lunbo1.jpg" onmouseover="closeTimer()" onmouseout="openTimer()">
+    <div class="page-code">
+        <div class="page-index page-index-focused" onclick="changePage(0)"></div>
+        <div class="page-index" onclick="changePage(1)"></div>
+        <div class="page-index" onclick="changePage(2)"></div>
+        <div class="page-index" onclick="changePage(3)"></div>
+        <div class="page-index" onclick="changePage(4)"></div>
+    </div>
+    <div id="last-page" onclick="changePageByAction('-')"><img src="images/上一页%20(1).png"></div>
+    <div id="next-page" onclick="changePageByAction('+')"><img src="images/下一页%20(1).png"></div>
+    <div class="menu"></div>
+</div>
 </body>
 </html>
