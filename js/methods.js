@@ -16,10 +16,12 @@ function setLunbo() {
         obj.src=imgUrl[(++flag)%imgUrl.length];
         pages[(flag-1)%imgUrl.length].classList.remove("page-index-focused");
         pages[flag%imgUrl.length].classList.add("page-index-focused");
-    },2000)
+    },2000);
+    console.log(timerId);
 }
 
 function closeTimer() {
+    console.log(timerId);
     clearInterval(timerId);
 }
 function openTimer() {
@@ -49,7 +51,11 @@ function changePageByAction(option) {
     }
     else if(option==="-"){
         const obj = document.getElementById("lun-bo");
-        obj.src=imgUrl[(--flag)%imgUrl.length];
+        flag--;
+        if(flag===-1){
+            flag=4;
+        }
+        obj.src=imgUrl[flag%imgUrl.length];
         pages[(flag+1)%imgUrl.length].classList.remove("page-index-focused");
         pages[flag%imgUrl.length].classList.add("page-index-focused");
     }
